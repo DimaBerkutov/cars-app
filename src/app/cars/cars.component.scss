@@ -1,0 +1,11 @@
+.cars-block {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid grey;
+
+  .param {
+    margin: 0 0 10px;
+  }
+}
