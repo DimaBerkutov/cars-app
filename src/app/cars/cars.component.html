@@ -1,6 +1,6 @@
 <div class="cars-block" *ngFor="let car of cars">
   <b class="param">{{ car.name }}</b>
   <span class="param">{{ car.color }}</span>
-  <span class="param">$ {{ car.price }}</span>
+  <span class="param">{{ car.price | currency: 'USD' : 'symbol' }}</span>
   <span class="param">{{ car.discription }}</span>
 </div>
