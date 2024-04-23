@@ -1,9 +1,25 @@
-<mat-list role="list">
-  <mat-list-item role="listitem">
-    <a routerLink="/card">Card</a>
-  </mat-list-item>
-  <mat-list-item role="listitem">Item 2</mat-list-item>
-  <mat-list-item role="listitem">Item 3</mat-list-item>
-</mat-list>
+<div class="container-fluid mt-1">
+  <div class="flex-container">
+    <div class="flex-item flex-item-first car-names" #firstElement>
+      <button class="name" *ngFor="let car of cars" (click)="onCarClick(car)">
+        {{ car.name }}
+      </button>
+    </div>
+    <div
+      class="grabber"
+      appResize
+      [leftResize]="firstElement"
+      [rightResize]="rightElement"
+    ></div>
+    <div class="flex-item flex-item-second" #rightElement>
+      <div class="content-card">
+        <h2>{{ car.name }}</h2>
+        <span>{{ car.color }}</span>
+        <b>{{ car.price }}</b>
+        <p>{{ car.discription }}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <app-cars [cars]="cars"></app-cars>

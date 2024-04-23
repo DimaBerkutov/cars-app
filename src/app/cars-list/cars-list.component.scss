@@ -1,0 +1,58 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item {
+  gap: 15px;
+
+  & .name {
+    max-width: 200px;
+    border-radius: 5px;
+    background: #3eabdf;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.flex-item-first {
+  flex-basis: 300px;
+}
+
+.flex-item-second {
+  flex-grow: 1;
+}
+
+.grabber {
+  width: 5px;
+  margin: 0 10px;
+  background: #ccc;
+}
+
+.grabber:hover {
+  cursor: e-resize;
+}
+
+.side-panel {
+  background-color: lightgray;
+}
+
+.car-names {
+  display: flex;
+  flex-direction: column;
+  background: aliceblue;
+  padding: 20px;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+
+  h2,
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
