@@ -6,7 +6,7 @@
 .flex-item {
   gap: 15px;
 
-  & .name {
+  .name {
     max-width: 200px;
     border-radius: 5px;
     background: #3eabdf;
@@ -54,5 +54,30 @@
   p {
     padding: 0;
     margin: 0;
+  }
+}
+
+.car-form {
+  padding: 20px;
+
+  .car-input {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 10px;
+
+    label {
+    }
+
+    input {
+      border-radius: 5px;
+
+      &.valid {
+        border: 2px solid green;
+      }
+
+      &.not-valid {
+        border: 2px solid red;
+      }
+    }
   }
 }

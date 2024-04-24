@@ -1,4 +1,62 @@
 <div class="container-fluid mt-1">
+  <div class="car-form" [formGroup]="carForm">
+    <div class="car-input">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        formControlName="name"
+        [ngClass]="{
+          valid: carForm.controls.name.valid,
+          'not-valid': !carForm.controls.name.valid
+        }"
+      />
+      <span
+        *ngIf="!carForm.controls.name.valid && carForm.controls.name.touched"
+        >Not valid</span
+      >
+    </div>
+    <div class="car-input">
+      <label for="color">Color</label>
+      <input id="color" formControlName="color" 
+        [ngClass]="{
+          valid: carForm.controls.color.valid,
+          'not-valid': !carForm.controls.color.valid
+        }" />
+      <span
+        *ngIf="!carForm.controls.color.valid && carForm.controls.color.touched"
+        >Not valid</span
+      >
+    </div>
+    <div class="car-input">
+      <label for="price">Price</label>
+      <input id="price" formControlName="price" 
+        [ngClass]="{
+          valid: carForm.controls.price.valid,
+          'not-valid': !carForm.controls.price.valid
+        }" />
+      <span
+        *ngIf="!carForm.controls.price.valid && carForm.controls.price.touched"
+        >Not valid</span
+      >
+    </div>
+    <div class="car-input">
+      <label for="discription">Discription</label>
+      <input id="discription" formControlName="discription" 
+        [ngClass]="{
+          valid: carForm.controls.discription.valid,
+          'not-valid': !carForm.controls.discription.valid
+        }" />
+      <span
+        *ngIf="
+          !carForm.controls.discription.valid &&
+          carForm.controls.discription.touched
+        "
+        >Not valid</span
+      >
+    </div>
+    <button (click)="onFormDataSave()">Save Car</button>
+  </div>
+
   <div class="flex-container">
     <div class="flex-item flex-item-first car-names" #firstElement>
       <button class="name" *ngFor="let car of cars" (click)="onCarClick(car)">
